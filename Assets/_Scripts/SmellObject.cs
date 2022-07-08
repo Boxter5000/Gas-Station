@@ -7,8 +7,8 @@ public class SmellObject : MonoBehaviour
     [HideInInspector] public float maxDistance;
     private SphereCollider _collider;
 
-    [Range(0, 1)] public float covertPercent;
-    [SerializeField] private float colliderRadius = 5f;
+    [Range(0, 1)] public float covertPercent = 0.35f;
+    [SerializeField] private float colliderRadius = 14f;
 
     [SerializeField] private bool _drawDebug;
 
