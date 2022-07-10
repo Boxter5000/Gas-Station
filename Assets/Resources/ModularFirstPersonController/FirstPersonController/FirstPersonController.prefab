@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1257553820}
   - component: {fileID: 448693565}
   - component: {fileID: 448693564}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 4459864851310106424}
-  turnSpeed: 5
+  turnSpeed: 20
   point2Target: 1
   swingVertical: 1
   swingVerticalDegrees: 1.8
@@ -213,10 +213,10 @@ MonoBehaviour:
   swingHorizontalDegrees: 0.8
   swingHorizontalSpeed: 0.5
   holdLeftHand: 0
-  camHorizontalOffset: 0
+  camHorizontalOffset: 0.4
   camVerticalOffset: 0
   flashlightSwitchKey: 102
-  soundsActive: 0
+  soundsActive: 1
   soundFlashlightON: {fileID: 8300000, guid: 95b72e949cef9134f9b784b7b2ea8a08, type: 3}
   soundFlashlightOff: {fileID: 8300000, guid: f56ddfe8e15dd4e4589e2ed6f1fa37c5, type: 3}
 --- !u!1 &1324149249
@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1324149250}
   - component: {fileID: 1324149251}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 4459864850019384741}
   - component: {fileID: 4459864850019384740}
   - component: {fileID: 767280730}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: FirstPersonController
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 4459864851310106426}
   - component: {fileID: 4459864851310106427}
   - component: {fileID: 42422858}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PlayerCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4459864851508666808}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2320,7 +2320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistance: 0
-  covertPercent: 0.323
+  covertPercent: 0.43
   colliderRadius: 5
   _drawDebug: 0
 --- !u!135 &1361171519
@@ -2343,13 +2343,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1257553818, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-      propertyPath: m_Layer
-      value: 3
+    - target: {fileID: 1324149250, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.164
       objectReference: {fileID: 0}
-    - target: {fileID: 1324149249, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-      propertyPath: m_Layer
-      value: 3
+    - target: {fileID: 1324149250, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.006
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_RootOrder
@@ -2398,18 +2398,6 @@ PrefabInstance:
     - target: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_Name
       value: FirstPersonController
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459864851310106424, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459864851508666809, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-      propertyPath: m_Layer
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
@@ -2815,7 +2803,7 @@ GameObject:
   - component: {fileID: 1702715623}
   - component: {fileID: 1702715618}
   - component: {fileID: 1702715617}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2834,7 +2822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a105dc99748bb4c8d94f90bfb48288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchForce: 20
+  launchForce: 3
 --- !u!54 &1702715618
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4053,7 +4041,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119976487}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.63, y: -2.6390142, z: 6.78}
+  m_LocalPosition: {x: 4.63, y: -7.67, z: 6.78}
   m_LocalScale: {x: 10.44, y: 8.9164, z: 1}
   m_Children: []
   m_Father: {fileID: 1941231695}
