@@ -7,9 +7,9 @@ public class Smell : MonoBehaviour
 {
     public enum SmellStrength
     {
-        Covered, // Enemy can not Sence you
-        Lingering, // enemy knows your general position
-        Exposed, // Enemy has full awareness of where you are
+        Covered = 0, // Enemy can not Sense you
+        Lingering = 1, // enemy knows your general position
+        Exposed = 2, // Enemy has full awareness of where you are
     }
 
     private readonly List<SmellObject> _smellsInRange = new List<SmellObject>();
