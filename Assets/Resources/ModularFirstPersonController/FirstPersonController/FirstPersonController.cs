@@ -122,6 +122,9 @@ public class FirstPersonController : MonoBehaviour
 
     #endregion
 
+    [HideInInspector]public Inventory inventory;
+    [SerializeField] public UI_Inventory _uiInventory;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -130,6 +133,9 @@ public class FirstPersonController : MonoBehaviour
         playerCamera.fieldOfView = fov;
         originalScale = transform.localScale;
         jointOriginalPos = joint.localPosition;
+
+        inventory = new Inventory();
+        _uiInventory.SetInventory(inventory);
 
         if (!unlimitedSprint)
         {
