@@ -16,7 +16,7 @@ public class Smell : MonoBehaviour
     private SmellObject _nearestSmellObject;
     private float _shortestRange = float.MaxValue;
 
-    [HideInInspector] public SmellStrength currentSmellStrength = SmellStrength.Exposed;
+    public SmellStrength currentSmellStrength = SmellStrength.Exposed;
     [SerializeField] private bool debugMode;
     private void Update()
     {
