@@ -10,10 +10,11 @@ namespace _Scripts.Player
         [SerializeField] private KeyCode pickupKey = KeyCode.E;
         [SerializeField] private Transform origin;
         [SerializeField] private float pickupDistance;
-        private PickupItem _currentItem;
         
         
-
+        private IInteract _currentItem;
+        
+        
         private void Update()
         {
             if (!Input.GetKeyDown(pickupKey)) return;
@@ -24,7 +25,9 @@ namespace _Scripts.Player
                 Physics.Raycast(ray ,out hit);
 
                 if(hit.distance > pickupDistance) return;
-                _currentItem = hit.transform.gameObject.GetComponent<PickupItem>();
+                
+                _currentItem = hit.transform.gameObject.GetComponent<IInteract>();
+                
                 if (_currentItem != null)
                 {
                     _currentItem.OnInteract(gameObject);
