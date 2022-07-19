@@ -12,11 +12,11 @@ namespace _Scripts.Inventory
             Instance = this;
         }
 
-        public Transform itemWorldPf;
-        
+        public Sprite Ziptie;
         public Sprite LighterSprite;
         public Sprite DynamitSprite;
         public Sprite KeysSprite;
+        public Sprite Battery;
 
     }
 }
