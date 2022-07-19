@@ -135,7 +135,7 @@ public class FirstPersonController : MonoBehaviour
         jointOriginalPos = joint.localPosition;
 
         inventory = new Inventory();
-        _uiInventory.SetInventory(inventory);
+        
 
         if (!unlimitedSprint)
         {
@@ -146,6 +146,7 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
+        _uiInventory.SetInventory(inventory);
         if(lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;

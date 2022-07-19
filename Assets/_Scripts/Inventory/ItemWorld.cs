@@ -27,7 +27,6 @@ public class ItemWorld : MonoBehaviour, IInteract
     {
         var _owner = owner.transform.parent.GetComponent<FirstPersonController>();
         _owner.inventory.AddItem(_item);
-        _owner._uiInventory.RefreshInventoryItems();
         Destroy(gameObject);
     }
 

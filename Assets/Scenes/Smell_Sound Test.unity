@@ -3232,5 +3232,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5570625483751151023, guid: 11126a4d23e1b804fa3ac61f151845e6, type: 3}
+      propertyPath: Battery
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a0441d49327f4d4d8c048eff08f5732, type: 3}
+    - target: {fileID: 5570625483751151023, guid: 11126a4d23e1b804fa3ac61f151845e6, type: 3}
+      propertyPath: LighterSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f64a95732bfd73b4e88875a73e1e0131, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11126a4d23e1b804fa3ac61f151845e6, type: 3}

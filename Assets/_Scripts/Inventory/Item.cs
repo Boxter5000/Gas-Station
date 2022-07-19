@@ -27,4 +27,20 @@ public class Item
             case ItemType.Battery:  return ItemAssets.Instance.Battery;
         }
     }
+
+    public bool isStackable()
+    {
+        switch (itemType)
+        {
+            case ItemType.Battery:
+            case ItemType.Dynamite:
+            case ItemType.Ziptie: 
+                return true;
+            case ItemType.Key:
+            case ItemType.Lighter:
+                return false;
+        }
+
+        return false;
+    }
 }
