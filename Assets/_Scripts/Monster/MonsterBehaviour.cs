@@ -1,4 +1,5 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -13,7 +14,9 @@ namespace _Scripts.Monster
 
         [SerializeField] private LayerMask _loud, _smelly, _ground;
 
-        private Vector3 XZPlane = new Vector3(1, 0, 1);
+        private Vector3Int XZPlane = new Vector3Int(1, 0, 1);
+
+        public GameObject destination;
         
         //Idling
         private Vector3 _walkPoint;
@@ -40,20 +43,26 @@ namespace _Scripts.Monster
 
         private void Update()
         {
+            /*
             Debug.Log(_targetSet);
             if (!_targetSet)
             {
                 SearchTarget();
-            }
-            else
-            {
                 _agent.SetDestination(_targetPosition);
                 Debug.Log(_targetPosition);
             }
 
-            if ((new Vector2(_agent.transform.position.x, _agent.transform.position.z) - new Vector2(_targetPosition.x, _targetPosition.z)).magnitude > 8) return;
+            var temp = _agent.transform.position;
+            temp.y = 0;
+            if ((temp - _targetPosition).magnitude > 8) return;
             _targetSet = false;
             Debug.Log("ReachedDestination - Looking for Target");
+            
+
+            _agent.SetDestination(_player.transform.position);
+            */
+            
+            _agent.SetDestination(destination.transform.position);
         }
 
         private void SearchTarget()
@@ -87,8 +96,9 @@ namespace _Scripts.Monster
             {
                 _targetPosition = currentLoudestObj.transform.position 
                                   + Random.insideUnitSphere * currentLoudestObj.transform.gameObject.GetComponentInParent<AudioSource>().volume * hearingOffset;
+                _targetPosition.y = 0;
                 _targetSet = true;
-                Debug.Log("FoundTarget");
+                Debug.Log("FoundTarget: " + currentLoudestObj.name);
             }
             
             if (!_targetSet) 
@@ -119,6 +129,7 @@ namespace _Scripts.Monster
                 {
                     _targetPosition = currentSmelliestObj.transform.position 
                                       + Random.insideUnitSphere * (int)currentLoudestObj.transform.gameObject.GetComponentInParent<Smell>().currentSmellStrength * smellingOffset;
+                    _targetPosition.y = 0;
                     _targetSet = true;
                     Debug.Log("FoundTarget");
                 }
