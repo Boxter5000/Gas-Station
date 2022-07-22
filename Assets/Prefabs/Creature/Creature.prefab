@@ -3127,6 +3127,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8978474095560749627}
   - component: {fileID: 3060721832115841089}
+  - component: {fileID: 6288400336467712403}
+  - component: {fileID: 5861679704702408152}
   m_Layer: 0
   m_Name: Creature
   m_TagString: Untagged
@@ -3169,6 +3171,55 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!195 &6288400336467712403
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634001034441762945}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 11
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 3
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &5861679704702408152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634001034441762945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5387f82dae4544281e173c1479f5e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _terrain: {fileID: 0}
+  _loud:
+    serializedVersion: 2
+    m_Bits: 256
+  _smelly:
+    serializedVersion: 2
+    m_Bits: 128
+  _ground:
+    serializedVersion: 2
+    m_Bits: 1
+  destination: {fileID: 0}
+  _smellRadius: 50
+  _hearingRadius: 80
+  hearingOffset: 20
+  smellingOffset: 20
 --- !u!1 &8707269610246229853
 GameObject:
   m_ObjectHideFlags: 0
