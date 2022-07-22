@@ -12,7 +12,6 @@ public class UI_Inventory : MonoBehaviour
     {
         itemSlotContainer = transform.Find("InventoryHolder");
         itemSlotTemplate = itemSlotContainer.Find("ItemSlot");
-        Debug.Log(itemSlotContainer);
     }
 
     public void SetInventory(Inventory inventory)

@@ -136,6 +136,8 @@ public class FirstPersonController : MonoBehaviour
 
         inventory = new Inventory();
         
+        transform.Find("DeathCollider").GetComponent<Death>().SetPlayer(this);
+        
 
         if (!unlimitedSprint)
         {

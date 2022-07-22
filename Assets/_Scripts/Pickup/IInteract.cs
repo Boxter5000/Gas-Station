@@ -6,5 +6,6 @@ namespace _Scripts.Pickup
     {
         void OnInteract(GameObject owner);
         void OnEndInteract(Transform launchDir);
+        void DrawOutline(bool draw);
     }
 }
