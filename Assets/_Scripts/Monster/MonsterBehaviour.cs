@@ -1,4 +1,5 @@
 using System;
+using System.Configuration;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
@@ -50,31 +51,7 @@ namespace _Scripts.Monster
             _targetPosition = transform.position;
         }
 
-        private void Update()
-        {
-            Debug.Log(_targetSet.ToString());
-            if (!_targetSet)
-            {
-                SearchTarget();
-            }
-            else
-            {
-                _agent.SetDestination(_targetPosition);
-                Debug.Log(_targetPosition.ToString());
-                Timer += Time.deltaTime;
-                if (Timer > 10)
-                {
-                    _targetSet = false;
-                }
-            }
-
-            var temp = _agent.transform.position;
-            temp.y = terrain.SampleHeight(_targetPosition);
-            if ((temp - _targetPosition).magnitude > 2) return;
-            _targetSet = false;
-        }
-
-        private void SetSoundTargetPosition(GameObject obj, float offset)
+        public void SetSoundTargetPosition(GameObject obj, float offset)
         {
             _targetPosition = obj.transform.position 
                               + Random.insideUnitSphere * (GetAudioVolume(obj.transform.gameObject.GetComponentInParent<AudioSource>(), 1024) * offset - offset);
@@ -84,7 +61,7 @@ namespace _Scripts.Monster
             _objectInHearingRange = true;
         }
         
-        private void SetSmellTargetPosition(GameObject obj, float offset)
+        public void SetSmellTargetPosition(GameObject obj, float offset)
         {
             _targetPosition = obj.transform.position 
                               + Random.insideUnitSphere * ((int)obj.gameObject.GetComponentInParent<Smell>().currentSmellStrength * offset);
@@ -94,7 +71,7 @@ namespace _Scripts.Monster
             _objectInSmellRange = true;
         }
 
-        private float GetAudioVolume(AudioSource source, int sampleLength)
+        public float GetAudioVolume(AudioSource source, int sampleLength)
         {
             if (source.clip == null) return 0; 
             var clipSampleData = new float[sampleLength];
@@ -102,7 +79,7 @@ namespace _Scripts.Monster
             return clipSampleData.Sum(sample => Mathf.Abs(sample)) / sampleLength;
         }
 
-        private void SearchTarget()
+        public void SearchTarget()
         {
             var position = transform.position;
             //Hearing
@@ -190,23 +167,23 @@ namespace _Scripts.Monster
                     else
                     {
                         _targetSet = true;
-                        Patroling();
+                        Patrolling();
                     }
                 }
                 else
                 {
                     _targetSet = true;
-                    Patroling();
+                    Patrolling();
                 }
             }
         }
 
-        private void Patroling()
+        public void Patrolling()
         {
             var Offset = 8;
             var _patrolPosition = _targetPosition + Random.onUnitSphere * Offset;
             _patrolPosition.y = terrain.SampleHeight(_patrolPosition);
-            _targetPosition = _patrolPosition;
+            _agent.SetDestination(_patrolPosition);
             
             Debug.Log("Patrolling");
         }
